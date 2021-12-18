@@ -24,7 +24,7 @@ app.MapGet("/getTopFiveStarredRepos", async ([FromQuery] string language, [FromS
 {
     try
     {
-        var url = configuration.GetValue<string>("GitHubSerchURL");
+        var url = configuration.GetValue<string>("GitHubSearchURL");
 
         if (String.IsNullOrEmpty(url)) return Results.Problem("URL to GitHub API not defined in app settings");
 
